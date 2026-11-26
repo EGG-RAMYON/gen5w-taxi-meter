@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="@PACKAGE@" android:versionCode="13" android:versionName="0.1.12">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <application android:label="@LABEL@" android:allowBackup="false" android:icon="@drawable/taxi_meter_icon"
+        android:theme="@android:style/Theme.Holo.NoActionBar">
+        <activity android:name="dev.gen5w.taxi.MainActivity" android:exported="false"
+            android:launchMode="singleTop" android:screenOrientation="landscape" />
+        <activity-alias android:name="@PACKAGE@.Launcher" android:exported="true"
+            android:targetActivity="dev.gen5w.taxi.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+    </application>
+</manifest>

@@ -1,0 +1,32 @@
+{
+  "id": "gen5w-taxi-meter-diag",
+  "name": "Gen5W 차량 데이터 진단",
+  "version": "0.1.12",
+  "hmgapi": ">=1.0.2",
+  "authors": [
+    "gen5w-taxi-meter contributors"
+  ],
+  "license": "AGPL-3.0",
+  "description": "읽기 전용 차량 속도·주행계와 오프라인 GPS를 사용하는 개인용 앱",
+  "apps": [
+    {
+      "apk": "app/gen5w-taxi-meter-diag.apk",
+      "package": "dev.gen5w.taxi.diag"
+    }
+  ],
+  "provides": {
+    "launcher": [
+      {
+        "id": "gen5w-taxi-meter-diag",
+        "package": "dev.gen5w.taxi.diag",
+        "class": ".Launcher"
+      }
+    ]
+  },
+  "vehicle": {
+    "read": [
+      "speed",
+      "odometer"
+    ]
+  }
+}
